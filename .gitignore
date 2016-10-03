@@ -45,3 +45,7 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+.vs/
+bm_sbus_cmd/obj/
+bm_sbus_cmd/bin/
