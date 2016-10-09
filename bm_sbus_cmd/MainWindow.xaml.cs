@@ -90,24 +90,23 @@ namespace bm_sbus_cmd
         {
             int byteOffset = offset / 8;
             int bitOffset = offset % 8;
-            uint mask = 2047, value = 0;
-            mask <<= (32 - 8 - 11 - bitOffset);
-            value = ((uint)data) << (32 - 8 - 11 - bitOffset);
+            uint value = ((uint)data);
+            
+            buffer[byteOffset + 0] |= (byte)((value << bitOffset) & 0xFF);
+            buffer[byteOffset + 1] |= (byte)((value >> (8 - bitOffset)) & 0xFF);
+            buffer[byteOffset + 2] |= (byte)((value >> (16 - bitOffset)) & 0xFF);
+        }
 
-            buffer[byteOffset] &= (byte)(((~mask) >> 16) & 0xFF); // Clear bits
-            buffer[byteOffset] |= (byte)(((value) >> 16) & 0xFF); // Set bits
+        private void updateValues()
+        {
 
-            buffer[byteOffset] &= (byte)(((~mask) >> 8) & 0xFF);
-            buffer[byteOffset] |= (byte)(((value) >> 8) & 0xFF);
-
-            buffer[byteOffset] &= (byte)((~mask) & 0xFF);
-            buffer[byteOffset] |= (byte)((value) & 0xFF);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            int[] data = new int[17] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-            data[0] = (int)V0_00.Value;
+            int[] data = new int[17] { (int)V0_00.Value, (int)V0_01.Value, (int)V0_02.Value, (int)V0_03.Value, (int)V0_04.Value, (int)V0_05.Value, (int)V0_06.Value, (int)V0_07.Value, (int)V0_08.Value, (int)V0_09.Value, (int)V0_10.Value, (int)V0_11.Value, (int)V0_12.Value, (int)V0_13.Value, (int)V0_14.Value, (V0_15.IsChecked == true) ? 1 : 0, (V0_16.IsChecked == true) ? 1 : 0 };
+            //data[0] = (int)V0_00.Value;
+            data[1] = (int)V0_01.Value;
             writeFrame(0, data);
             outp.Text = serial.ReadExisting();
         }

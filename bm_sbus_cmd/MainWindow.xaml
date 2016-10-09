@@ -17,41 +17,103 @@
         <TabControl>
             <TabControl.Items>
                 <TabItem Name="tabCam0" Header="Camera 0">
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="150"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="50"/>
-                        </Grid.ColumnDefinitions>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="*"/>
-                        </Grid.RowDefinitions>
+                    <ScrollViewer>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="150"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="50"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
 
-                        <TextBox Name="T0_00" Grid.Row="0" Text="SBus channel 1" Style="{DynamicResource CommentTextBoxStyle}"/>
-                        <Slider Name="V0_00" Grid.Row="0" Grid.Column="1" Style="{DynamicResource ValueSliderStyle}"/>
-                        <CheckBox Name="S0_00" Grid.Row="0" Grid.Column="2" Style="{DynamicResource SyncCheckBoxStyle}"/>
+                            <TextBox Name="T0_00" Grid.Row="0" Text="SBus channel 2" Style="{DynamicResource CommentTextBoxStyle}"/>
+                            <Slider Name="V0_00" Grid.Row="0" Grid.Column="1" Style="{DynamicResource ValueSliderStyle}"/>
+                            <CheckBox Name="S0_00" Grid.Row="0" Grid.Column="2" Style="{DynamicResource SyncCheckBoxStyle}"/>
 
-                        <TextBox Name="T0_01" Grid.Row="1" Text="SBus channel 2" Style="{DynamicResource CommentTextBoxStyle}"/>
-                        <Slider Name="V0_01" Grid.Row="1" Grid.Column="1" Style="{DynamicResource ValueSliderStyle}"/>
-                        <CheckBox Name="S0_01" Grid.Row="1" Grid.Column="2" Style="{DynamicResource SyncCheckBoxStyle}"/>
-                    </Grid>
+                            <TextBox Name="T0_01" Grid.Row="1" Text="SBus channel 3" Style="{DynamicResource CommentTextBoxStyle}"/>
+                            <Slider Name="V0_01" Grid.Row="1" Grid.Column="1" Style="{DynamicResource ValueSliderStyle}"/>
+                            <CheckBox Name="S0_01" Grid.Row="1" Grid.Column="2" Style="{DynamicResource SyncCheckBoxStyle}"/>
+
+                            <TextBox Name="T0_02" Grid.Row="2" Text="SBus channel 4" Style="{DynamicResource CommentTextBoxStyle}"/>
+                            <Slider Name="V0_02" Grid.Row="2" Grid.Column="1" Style="{DynamicResource ValueSliderStyle}"/>
+                            <CheckBox Name="S0_02" Grid.Row="2" Grid.Column="2" Style="{DynamicResource SyncCheckBoxStyle}"/>
+
+                            <TextBox Name="T0_03" Grid.Row="3" Text="SBus channel 5" Style="{DynamicResource CommentTextBoxStyle}"/>
+                            <Slider Name="V0_03" Grid.Row="3" Grid.Column="1" Style="{DynamicResource ValueSliderStyle}"/>
+                            <CheckBox Name="S0_03" Grid.Row="3" Grid.Column="2" Style="{DynamicResource SyncCheckBoxStyle}"/>
+
+                            <TextBox Name="T0_04" Grid.Row="4" Text="SBus channel 6" Style="{DynamicResource CommentTextBoxStyle}"/>
+                            <Slider Name="V0_04" Grid.Row="4" Grid.Column="1" Style="{DynamicResource ValueSliderStyle}"/>
+                            <CheckBox Name="S0_04" Grid.Row="4" Grid.Column="2" Style="{DynamicResource SyncCheckBoxStyle}"/>
+
+                            <TextBox Name="T0_05" Grid.Row="5" Text="SBus channel 7" Style="{DynamicResource CommentTextBoxStyle}"/>
+                            <Slider Name="V0_05" Grid.Row="5" Grid.Column="1" Style="{DynamicResource ValueSliderStyle}"/>
+                            <CheckBox Name="S0_05" Grid.Row="5" Grid.Column="2" Style="{DynamicResource SyncCheckBoxStyle}"/>
+
+                            <TextBox Name="T0_06" Grid.Row="6" Text="SBus channel 8" Style="{DynamicResource CommentTextBoxStyle}"/>
+                            <Slider Name="V0_06" Grid.Row="6" Grid.Column="1" Style="{DynamicResource ValueSliderStyle}"/>
+                            <CheckBox Name="S0_06" Grid.Row="6" Grid.Column="2" Style="{DynamicResource SyncCheckBoxStyle}"/>
+
+                            <TextBox Name="T0_07" Grid.Row="7" Text="SBus channel 9" Style="{DynamicResource CommentTextBoxStyle}"/>
+                            <Slider Name="V0_07" Grid.Row="7" Grid.Column="1" Style="{DynamicResource ValueSliderStyle}"/>
+                            <CheckBox Name="S0_07" Grid.Row="7" Grid.Column="2" Style="{DynamicResource SyncCheckBoxStyle}"/>
+
+                            <TextBox Name="T0_08" Grid.Row="8" Text="SBus channel 10" Style="{DynamicResource CommentTextBoxStyle}"/>
+                            <Slider Name="V0_08" Grid.Row="8" Grid.Column="1" Style="{DynamicResource ValueSliderStyle}"/>
+                            <CheckBox Name="S0_08" Grid.Row="8" Grid.Column="2" Style="{DynamicResource SyncCheckBoxStyle}"/>
+
+                            <TextBox Name="T0_09" Grid.Row="9" Text="SBus channel 11" Style="{DynamicResource CommentTextBoxStyle}"/>
+                            <Slider Name="V0_09" Grid.Row="9" Grid.Column="1" Style="{DynamicResource ValueSliderStyle}"/>
+                            <CheckBox Name="S0_09" Grid.Row="9" Grid.Column="2" Style="{DynamicResource SyncCheckBoxStyle}"/>
+
+                            <TextBox Name="T0_10" Grid.Row="10" Text="SBus channel 12" Style="{DynamicResource CommentTextBoxStyle}"/>
+                            <Slider Name="V0_10" Grid.Row="10" Grid.Column="1" Style="{DynamicResource ValueSliderStyle}"/>
+                            <CheckBox Name="S0_10" Grid.Row="10" Grid.Column="2" Style="{DynamicResource SyncCheckBoxStyle}"/>
+
+                            <TextBox Name="T0_11" Grid.Row="11" Text="SBus channel 13" Style="{DynamicResource CommentTextBoxStyle}"/>
+                            <Slider Name="V0_11" Grid.Row="11" Grid.Column="1" Style="{DynamicResource ValueSliderStyle}"/>
+                            <CheckBox Name="S0_11" Grid.Row="11" Grid.Column="2" Style="{DynamicResource SyncCheckBoxStyle}"/>
+
+                            <TextBox Name="T0_12" Grid.Row="12" Text="SBus channel 14" Style="{DynamicResource CommentTextBoxStyle}"/>
+                            <Slider Name="V0_12" Grid.Row="12" Grid.Column="1" Style="{DynamicResource ValueSliderStyle}"/>
+                            <CheckBox Name="S0_12" Grid.Row="12" Grid.Column="2" Style="{DynamicResource SyncCheckBoxStyle}"/>
+
+                            <TextBox Name="T0_13" Grid.Row="13" Text="SBus channel 15" Style="{DynamicResource CommentTextBoxStyle}"/>
+                            <Slider Name="V0_13" Grid.Row="13" Grid.Column="1" Style="{DynamicResource ValueSliderStyle}"/>
+                            <CheckBox Name="S0_13" Grid.Row="13" Grid.Column="2" Style="{DynamicResource SyncCheckBoxStyle}"/>
+
+                            <TextBox Name="T0_14" Grid.Row="14" Text="SBus channel 16" Style="{DynamicResource CommentTextBoxStyle}"/>
+                            <Slider Name="V0_14" Grid.Row="14" Grid.Column="1" Style="{DynamicResource ValueSliderStyle}"/>
+                            <CheckBox Name="S0_14" Grid.Row="14" Grid.Column="2" Style="{DynamicResource SyncCheckBoxStyle}"/>
+
+                            <TextBox Name="T0_15" Grid.Row="15" Text="SBus channel 17" Style="{DynamicResource CommentTextBoxStyle}"/>
+                            <CheckBox Name="V0_15" Grid.Row="15" Grid.Column="1" IsChecked="False" Style="{DynamicResource ValueCheckBoxStyle}"/>
+                            <CheckBox Name="S0_15" Grid.Row="15" Grid.Column="2" Style="{DynamicResource SyncCheckBoxStyle}"/>
+
+                            <TextBox Name="T0_16" Grid.Row="16" Text="SBus channel 18" Style="{DynamicResource CommentTextBoxStyle}"/>
+                            <CheckBox Name="V0_16" Grid.Row="16" Grid.Column="1" IsChecked="False" Style="{DynamicResource ValueCheckBoxStyle}"/>
+                            <CheckBox Name="S0_16" Grid.Row="16" Grid.Column="2" Style="{DynamicResource SyncCheckBoxStyle}"/>
+                        </Grid>
+                    </ScrollViewer>
                 </TabItem>
             </TabControl.Items>
         </TabControl>
