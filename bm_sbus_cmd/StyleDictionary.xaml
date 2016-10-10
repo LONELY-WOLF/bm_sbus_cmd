@@ -18,11 +18,15 @@
     <Style x:Key="SyncCheckBoxStyle" TargetType="CheckBox">
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="Content" Value="Sync"/>
-        <Setter Property="Margin" Value="3"/>
+        <Setter Property="Margin" Value="3,6"/>
     </Style>
     <Style x:Key="ValueCheckBoxStyle" TargetType="CheckBox">
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="Content" Value="On"/>
         <Setter Property="Margin" Value="3"/>
+    </Style>
+    <Style x:Key="CameraRadioButtonStyle" TargetType="RadioButton">
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="3,0"/>
     </Style>
 </ResourceDictionary>
