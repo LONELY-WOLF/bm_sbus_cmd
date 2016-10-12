@@ -111,14 +111,41 @@ namespace bm_sbus_cmd
 
         private void updateValues()
         {
-
+            int cam = 0;
+            if (radCam1.IsChecked == true) cam = 0;
+            else if (radCam2.IsChecked == true) cam = 1;
+            else if (radCam3.IsChecked == true) cam = 2;
+            else if (radCam4.IsChecked == true) cam = 3;
+            for (int i = 0; i < 16; i++)
+            {
+                if (Syncs[i].IsChecked == true)
+                {
+                    data[0, i] = (uint)Values[i].Value;
+                    data[1, i] = (uint)Values[i].Value;
+                    data[2, i] = (uint)Values[i].Value;
+                    data[3, i] = (uint)Values[i].Value;
+                }
+                else
+                {
+                    data[cam, i] = (uint)Values[i].Value;
+                }
+            }
+            data[cam, 16] = (uint)((V0_16.IsChecked == true) ? 2047 : 0);
+            data[cam, 17] = (uint)((V0_17.IsChecked == true) ? 2047 : 0);
+            for (int i = 0; i < 4; i++)
+            {
+                System.Threading.Thread.Sleep(50);
+                writeFrame(i, data);
+            }
+            outp.Text = serial.ReadExisting();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            
-            //data[0] = (int)V0_00.Value;
-            //data[1] = (int)V0_01.Value;
+            for(int i = 0; i < 16; i++)
+            {
+                data[0, i] = (uint)Values[i].Value;
+            }
             writeFrame(0, data);
             outp.Text = serial.ReadExisting();
         }
@@ -130,6 +157,11 @@ namespace bm_sbus_cmd
                 serial.Close();
             }
             cmbPorts.SelectedIndex = -1;
+        }
+
+        private void Button_Click_Update(object sender, RoutedEventArgs e)
+        {
+            updateValues();
         }
     }
 }
